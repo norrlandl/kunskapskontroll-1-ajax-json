@@ -1,6 +1,6 @@
 #main-content {
   margin: 100px 0 0 100px;
-  width: 400px;
+  width: 600px;
   /* background-color: antiquewhite; */
 }
 
@@ -36,6 +36,35 @@ i {
 }
 
 #button-rosters {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   border-radius: 0px 5px 5px 0px;
+}
+
+#result-rosters {
+  display: flex;
+  width: 800px;
+  /* background-color: antiquewhite; */
+  flex-wrap: wrap;
+}
+
+/* .rosters {
+  display: flex;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+*/
+.player {
+  background-color: white;
+  /* box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.1);
+  /* width: 30rem; */
+  border-radius: 0.5rem;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 140px;
+  height: 250px;
+  /* margin: 0 3rem; */
 }
