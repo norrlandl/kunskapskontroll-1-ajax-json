@@ -39,8 +39,6 @@ async function fetchDataTeam(e) {
     //   throw new Error('Something went wrong with the server');
     // }
     const data = await response.json();
-    console.log(data);
-    console.log(data.teams);
 
     let nhl = '';
     for (let teams of data.teams) {
@@ -67,25 +65,19 @@ async function fetchDataRoster(e) {
     );
 
     const dataRosters = await responseRosters.json();
-    // console.log(dataRosters);
-    let teamRosters = dataRosters.teams[0].roster.roster;
-    // console.log(teamRosters);
 
+    let teamRosters = dataRosters.teams[0].roster.roster;
     let rosters = '';
     for (let player of teamRosters) {
       rosters += `
                   <div class="player">
-                  <div class="number">${player.jerseyNumber}</div>
-                  <i>${player.position.name}</i>
-                  <h5 class="name"><a id="roster-info" href="#">${player.person.fullName}</a></h5>
+                  <div class="number"> ${player.jerseyNumber} </div>
+                  <i> ${player.position.name} </i>
+                  <h5 class="name"> ${player.person.fullName} </h5>
                   </div>`;
     }
-
     resultRosters.innerHTML = rosters;
   } catch (error) {
     console.log(error);
   }
 }
-
-// // Player ID
-// `https://statsapi.web.nhl.com/api/v1/people/${player.person.id}`;
